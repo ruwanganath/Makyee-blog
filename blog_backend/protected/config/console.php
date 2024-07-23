@@ -1,29 +1,42 @@
 <?php
 
-// This is the configuration for yiic console application.
+// This is the configuration for the yiic console application.
 // Any writable CConsoleApplication properties can be configured here.
 return array(
-	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Console Application',
+    // The base path of the application
+    'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
+    
+    // The name of the application
+    'name' => 'Makyee Blog App',
 
-	// preloading 'log' component
-	'preload'=>array('log'),
+    // Preloading the 'log' component for logging purposes
+    'preload' => array('log'),
 
-	// application components
-	'components'=>array(
+    // Application components
+    'components' => array(
 
-		// database settings are configured in database.php
-		'db'=>require(dirname(__FILE__).'/database.php'),
+        // Database settings are configured in a separate file 'database.php'
+        'db' => require(dirname(__FILE__) . '/database.php'),
 
-		'log'=>array(
-			'class'=>'CLogRouter',
-			'routes'=>array(
-				array(
-					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
-				),
-			),
-		),
+        // Logging configuration
+        'log' => array(
+            // Using CLogRouter to route log messages
+            'class' => 'CLogRouter',
+            'routes' => array(
+                // Using CFileLogRoute to log error and warning messages to a file
+                array(
+                    'class' => 'CFileLogRoute',
+                    'levels' => 'error, warning',
+                ),
+            ),
+        ),
+    ),
 
-	),
+    // Command map configuration
+    'commandMap' => array(
+        // Mapping 'setup' command to the SetupCommand class
+        'setup' => array(
+            'class' => 'application.commands.SetupCommand',
+        ),
+    ),
 );
