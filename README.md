@@ -42,6 +42,10 @@ npm install
 npm start
 ```
 
+- Configure REST Api backend server:
+
+change the Proxy API backend server URL settings in vite.config.ts file.
+
 - Open the application in your browser:
 
 The development server will start, and the application will be accessible at http://localhost:5174.

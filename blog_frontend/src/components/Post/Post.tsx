@@ -55,7 +55,8 @@ const Post: React.FC = () => {
             // Ensure we always fetch public posts by default
             const filtersWithPublic = { ...filters, public: '1' };
             const indexResponse = await axios.post(
-                'http://dev.blog_backend.com/index.php/post/index',
+                //'http://dev.blog_backend.com/index.php/post/index',
+                'http://dev.blog_backend.com/index.php/post/publicPostsIndex',                
                 qs.stringify({ filters: filtersWithPublic }),
                 {
                     headers: {
@@ -99,6 +100,7 @@ const Post: React.FC = () => {
 
                 setIconVisibility(visibility);
                 setPosts(postsWithAdditionalData);
+                setMessage(indexResponse.data.message);
             } else {
                 setMessage(indexResponse.data.message);
             }

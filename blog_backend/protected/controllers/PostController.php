@@ -233,5 +233,33 @@ class PostController extends Controller
             'message' => 'Posts available.',
         ));
     }
+
+  
+     /**
+     * Lists all public blog posts with optional filters.
+     */
+    public function actionPublicPostsIndex()
+    {
+        $filters = Yii::app()->request->getPost('filters', array());
+
+        $public = isset($filters['public']) ? $filters['public'] : null;
+        $search = isset($filters['search']) ? $filters['search'] : null;
+        $author = isset($filters['author']) ? $filters['author'] : null;
+        $startDate = isset($filters['startDate']) ? $filters['startDate'] : null;
+        $endDate = isset($filters['endDate']) ? $filters['endDate'] : null;
+
+        try {
+            $posts = Post::getPublicPosts($public, $search, $author, $startDate, $endDate);
+
+            if (!empty($posts)) {
+                $this->jsonResponse(array('posts' => $posts, 'message' => 'Posts available.'));
+            } else {
+                $this->jsonResponse(array('posts' => [], 'message' => 'No posts found.'));
+            }
+        } catch (Exception $e) {
+            $this->jsonResponse(array('error' => 'An error occurred while fetching posts.'), 500);
+        }
+    }
+
 }
 ?>

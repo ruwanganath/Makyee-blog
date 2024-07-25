@@ -110,13 +110,15 @@ const App: React.FC = () => {
             {/* Public Routes */}
             <Route path="/" element={<AuthLayout><Login /></AuthLayout>} />
             <Route path="/register" element={<AuthLayout><Register /></AuthLayout>} />
-            
+           
+
             {/* Private Routes */}
             <Route path="/posts" element={<PrivateRoute><MainLayout><Post /></MainLayout></PrivateRoute>} />
             <Route path="/manage-posts" element={<PrivateRoute><MainLayout><ManagePost /></MainLayout></PrivateRoute>} />
             <Route path="/create" element={<PrivateRoute><MainLayout><CreatePost /></MainLayout></PrivateRoute>} />
             <Route path="/edit/:id" element={<PrivateRoute><MainLayout><EditPost /></MainLayout></PrivateRoute>} />
             <Route path="/view/:id" element={<PrivateRoute><MainLayout><ViewPost /></MainLayout></PrivateRoute>} />
+            
         </Routes>
     );
 };
