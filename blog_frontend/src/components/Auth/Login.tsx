@@ -6,6 +6,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { faArrowRotateBack } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
 const Login: React.FC = () => {
     // State variables for username, password, message, loading state, verification link, and token
     const [username, setUsername] = useState('');
@@ -14,7 +15,7 @@ const Login: React.FC = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [verificationLink, setVerificationLink] = useState(false);
     const [verificationToken, setVerificationToken] = useState('');
-
+   
     // React Router's navigate hook for programmatic navigation
     const navigate = useNavigate();
 
@@ -26,11 +27,10 @@ const Login: React.FC = () => {
         e.preventDefault();
         setIsLoading(true);
         setMessage('');
-
         try {
             // Make POST request to authenticate user
             const response = await axios.post(
-                'http://dev.blog_backend.com/index.php/user/authenticate',
+                `${import.meta.env.VITE_API_URL}/index.php/user/authenticate`,
                 qs.stringify({ username, password }),
                 {
                     headers: {
@@ -70,7 +70,7 @@ const Login: React.FC = () => {
     const handleVerifyClick = async () => {
         try {
             const verifyTokenResponse = await axios.post(
-                'http://dev.blog_backend.com/index.php/user/VerifyToken',
+                `${import.meta.env.VITE_API_URL}/index.php/user/VerifyToken`,
                 qs.stringify({ verification_token: verificationToken }),
                 {
                     headers: {

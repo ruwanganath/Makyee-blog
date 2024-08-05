@@ -48,7 +48,7 @@ const ViewPost: React.FC = () => {
     const getUser = useCallback(async (user_id: number) => {
         try {
             const response = await axios.post(
-                'http://dev.blog_backend.com/index.php/user/getUser',
+                `${import.meta.env.VITE_API_URL}/index.php/user/getUser`,
                 qs.stringify({ user_id }),
                 { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
             );
@@ -63,7 +63,7 @@ const ViewPost: React.FC = () => {
     const fetchComments = useCallback(async () => {
         try {
             const commentsResponse = await axios.post(
-                'http://dev.blog_backend.com/index.php/comment/view',
+                `${import.meta.env.VITE_API_URL}/index.php/comment/view`,
                 qs.stringify({ post_id: id }),
                 { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
             );
@@ -97,7 +97,7 @@ const ViewPost: React.FC = () => {
 
         try {
             const viewResponse = await axios.post(
-                'http://dev.blog_backend.com/index.php/post/view',
+                `${import.meta.env.VITE_API_URL}/index.php/post/view`,
                 qs.stringify({ id }),
                 { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
             );
@@ -136,7 +136,7 @@ const ViewPost: React.FC = () => {
 
         const connectWebSocket = () => {
 
-            ws.current = new WebSocket('ws://localhost:8081');
+            ws.current = new WebSocket(import.meta.env.VITE_WEBSOCKET_SERVER_URL);
       
             ws.current.onopen = () => {
               console.log('Connected to WebSocket server');
@@ -167,7 +167,7 @@ const ViewPost: React.FC = () => {
         try {
             if (editingCommentId) {
                 await axios.post(
-                    'http://dev.blog_backend.com/index.php/comment/update',
+                    `${import.meta.env.VITE_API_URL}/index.php/comment/update`,
                     qs.stringify({ id: editingCommentId, comment: commentText }),
                     { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
                 );
@@ -175,7 +175,7 @@ const ViewPost: React.FC = () => {
                 setEditingCommentId(null);
             } else {
                 await axios.post(
-                    'http://dev.blog_backend.com/index.php/comment/create',
+                    `${import.meta.env.VITE_API_URL}/index.php/comment/create`,
                     qs.stringify({ post_id: id, user_id: userId, comment: commentText }),
                     { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
                 );
@@ -206,7 +206,7 @@ const ViewPost: React.FC = () => {
 
             try {
                 await axios.post(
-                    'http://dev.blog_backend.com/index.php/comment/delete',
+                    `${import.meta.env.VITE_API_URL}/index.php/comment/delete`,
                     qs.stringify({ id: commentId }),
                     { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
                 );
@@ -225,7 +225,7 @@ const ViewPost: React.FC = () => {
         if (ws.current && ws.current.readyState === WebSocket.OPEN) {
             try {
                 await axios.get(
-                    'http://dev.blog_backend.com/index.php/post/autoUpdatePublicPosts',
+                    `${import.meta.env.VITE_API_URL}/index.php/post/autoUpdatePublicPosts`,
                     { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
                 );
             } catch (error) {

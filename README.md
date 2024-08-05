@@ -114,6 +114,14 @@ This command will connect to your MySQL server using the credentials provided in
 
 It has been assumed all public posts which have atleast 1 comment and the user has atleast 2 posts under the users name. To implement this part, at the backend, a Dependency Manager for PHP has used (Composer and composer.json contains all dependencies - Rachet and websocket to manage the backend fully PHP to run websockets in the app) and please follow the documentation to setup composer in the project and install dependencies.
 
+The web socket server is configured to work on port 8081 and it can be changed at your preference. If it has changed,please set the environment variables according to the port which used. Also it is imprtant to run the websocket server for proper functioning of the application.
+
+once in the blog_backend project folder: run the following command to run the web socket server.
+
+```bash
+php start-server.php
+```
+
 # License
 
 This project is licensed under the MIT License.

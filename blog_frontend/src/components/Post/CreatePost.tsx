@@ -43,7 +43,7 @@ const CreatePost: React.FC = () => {
             const visibilityValue = visibility === 'public' ? 1 : 0;
 
             const createResponse = await axios.post(
-                'http://dev.blog_backend.com/index.php/post/create',
+                `${import.meta.env.VITE_API_URL}/index.php/post/create`,
                 qs.stringify({ user_id: userId, title, description, content, visibility: visibilityValue }),
                 {
                     headers: {
@@ -70,7 +70,7 @@ const CreatePost: React.FC = () => {
         if (ws.current && ws.current.readyState === WebSocket.OPEN) {
             try {
                 await axios.get(
-                    'http://dev.blog_backend.com/index.php/post/autoUpdatePublicPosts',
+                    `${import.meta.env.VITE_API_URL}/index.php/post/autoUpdatePublicPosts`,
                     { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
                 );
             } catch (error) {

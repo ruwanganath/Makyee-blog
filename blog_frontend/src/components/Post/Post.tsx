@@ -55,8 +55,7 @@ const Post: React.FC = () => {
             // Ensure we always fetch public posts by default
             const filtersWithPublic = { ...filters, public: '1' };
             const indexResponse = await axios.post(
-                //'http://dev.blog_backend.com/index.php/post/index',
-                'http://dev.blog_backend.com/index.php/post/publicPostsIndex',                
+                `${import.meta.env.VITE_API_URL}/index.php/post/publicPostsIndex`,
                 qs.stringify({ filters: filtersWithPublic }),
                 {
                     headers: {
@@ -127,7 +126,7 @@ const Post: React.FC = () => {
     // Example implementation of actionGetUser
     const getUser = async (userId: number) => {
         return await axios.post(
-            'http://dev.blog_backend.com/index.php/user/getUser',
+            `${import.meta.env.VITE_API_URL}/index.php/user/getUser`,
             qs.stringify({ user_id: userId }), // Ensure userId is correctly sent in the request body
             {
                 headers: {
@@ -139,7 +138,7 @@ const Post: React.FC = () => {
 
     const getCommentCount = async (postId: number) => {
         return await axios.post(
-            'http://dev.blog_backend.com/index.php/comment/count',
+            `${import.meta.env.VITE_API_URL}/index.php/comment/count`,
             qs.stringify({ post_id: postId }), // Ensure userId is correctly sent in the request body
             {
                 headers: {
@@ -151,7 +150,7 @@ const Post: React.FC = () => {
 
     const getlike_count = async (postId: number) => {
         return await axios.post(
-            'http://dev.blog_backend.com/index.php/like/count',
+            `${import.meta.env.VITE_API_URL}/index.php/like/count`,
             qs.stringify({ post_id: postId }), // Ensure userId is correctly sent in the request body
             {
                 headers: {
@@ -163,7 +162,7 @@ const Post: React.FC = () => {
 
     const getUserLike = async (postId: number, userId: number) => {
         return await axios.post(
-            'http://dev.blog_backend.com/index.php/like/getUserLike',
+            `${import.meta.env.VITE_API_URL}/index.php/like/getUserLike`,
             qs.stringify({ post_id: postId, user_id: userId }), // Ensure userId is correctly sent in the request body
             {
                 headers: {
@@ -176,7 +175,7 @@ const Post: React.FC = () => {
    
     const makeLike = async (postId: number, userId: number) => {
         return await axios.post(
-            'http://dev.blog_backend.com/index.php/like/create',
+            `${import.meta.env.VITE_API_URL}/index.php/like/create`,
             qs.stringify({ post_id: postId, user_id: userId }),
             {
                 headers: {
@@ -188,7 +187,7 @@ const Post: React.FC = () => {
 
     const undoLike = async (postId: number, userId: number) => {
         return await axios.post(
-            'http://dev.blog_backend.com/index.php/like/delete',
+            `${import.meta.env.VITE_API_URL}/index.php/like/delete`,
             qs.stringify({ post_id: postId, user_id: userId }),
             {
                 headers: {
@@ -200,7 +199,7 @@ const Post: React.FC = () => {
 
     const getUserIdByUsername =  async (username: string) => {
         return await axios.post(
-            'http://dev.blog_backend.com/index.php/user/getUsername',
+            `${import.meta.env.VITE_API_URL}/index.php/user/getUsername`,
             qs.stringify({ username: username }),
             {
                 headers: {

@@ -5,7 +5,8 @@ use WebSocket\Client;
 class PostController extends Controller
 {
 
-    
+    public const WEBSOCKET_SERVER = "ws://localhost:8081";
+
     /**
      * Disables CSRF validation for the entire controller.
      */
@@ -301,7 +302,7 @@ class PostController extends Controller
 
         try {
             // Create WebSocket client connection
-            $client = new Client("ws://localhost:8081");
+            $client = new Client($WEBSOCKET_SERVER);
 
             // Fetch public posts with comments
             $posts = Post::getPublicPostsWithComments();

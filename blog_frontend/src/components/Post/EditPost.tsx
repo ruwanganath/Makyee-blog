@@ -51,7 +51,7 @@ const EditPost: React.FC = () => {
 
         try {
             const updateResponse = await axios.post(
-                'http://dev.blog_backend.com/index.php/post/update',
+                `${import.meta.env.VITE_API_URL}/index.php/post/update`,
                 qs.stringify({
                     id: location.state.post.id,
                     user_id: userId,
