@@ -1,6 +1,9 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import axios from 'axios';
 import qs from 'qs';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRotateBack } from '@fortawesome/free-solid-svg-icons';
 
 const Register: React.FC = () => {
     // State variables for form inputs, messages, loading state, email validation, and verification details
@@ -145,6 +148,9 @@ const Register: React.FC = () => {
                 <button type="submit" disabled={isLoading}>
                     {isLoading ? 'Registering...' : 'Register'}
                 </button>
+                <Link className="back" to="/">
+                    <FontAwesomeIcon icon={faArrowRotateBack} /> Back
+                </Link>
                 {message && <p>{message}</p>}
                 {verificationLink && (
                     <a className="verify" rel="noopener noreferrer" onClick={handleVerifyClick}>

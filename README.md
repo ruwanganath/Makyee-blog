@@ -62,10 +62,10 @@ Edit the hosts file located at C:\Windows\System32\drivers\etc\hosts and add:
 - Edit the Apache virtual hosts configuration file located at C:\xampp\apache\conf\extra\httpd-vhosts.conf and add:
   (if the cloned folder in C: drive )
   <VirtualHost \*:80>
-  DocumentRoot "C:\makyee-blog\blog_backend"
+  DocumentRoot "C:/makyee-blog/blog_backend"
   ServerName dev.blog_backend
   ServerAlias dev.blog_backend
-  <Directory "C:\makyee-blog\blog_backend">
+  <Directory "C:/makyee-blog/blog_backend">
   AllowOverride All
   Require all Granted
   </Directory>
@@ -102,13 +102,17 @@ https://www.yiiframework.com/doc/blog/1.1/en/prototype.database
 - Method 2: Automated Setup
 
 First, update the database.php file located at protected/config/database.php with your database connection string.
-Then, run the setup command in the project folder:
+Then, run the setup command in the project folder blog_backend:
 
 ```bash
 php protected/yiic setup
 ```
 
 This command will connect to your MySQL server using the credentials provided in your main.php configuration file and execute the setup SQL queries if the database and tables don't already exist.
+
+## For the Second part of this blog application to have a public page with auto update feature using websockets
+
+It has been assumed all public posts which have atleast 1 comment and the user has atleast 2 posts under the users name. To implement this part, at the backend, a Dependency Manager for PHP has used (Composer and composer.json contains all dependencies - Rachet and websocket to manage the backend fully PHP to run websockets in the app) and please follow the documentation to setup composer in the project and install dependencies.
 
 # License
 
@@ -118,3 +122,4 @@ This project is licensed under the MIT License.
 
 Yii Framework: https://www.yiiframework.com
 React: https://reactjs.org
+Composer: https://getcomposer.org/

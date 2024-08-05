@@ -4318,3 +4318,1258 @@ Stack trace:
 REQUEST_URI=/index.php/post/publicPostsIndex
 in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (304)
 in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/07/26 07:59:20 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`makyee_blog`.`tbl_like`, CONSTRAINT `tbl_like_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_like` (`user_id`, `post_id`) VALUES (:yp0, :yp1).
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\LikeController.php (75)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/07/26 07:59:20 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`makyee_blog`.`tbl_like`, CONSTRAINT `tbl_like_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_like` (`user_id`, `post_id`) VALUES (:yp0, :yp1) in C:\Ruwanga\yii-1.1.29\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Ruwanga\yii-1.1.29\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\LikeController.php(75): CActiveRecord->save()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): LikeController->actionCreate()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('like/create')
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/like/create
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 07:59:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`makyee_blog`.`tbl_like`, CONSTRAINT `tbl_like_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_like` (`user_id`, `post_id`) VALUES (:yp0, :yp1).
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\LikeController.php (75)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/07/26 07:59:28 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`makyee_blog`.`tbl_like`, CONSTRAINT `tbl_like_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_like` (`user_id`, `post_id`) VALUES (:yp0, :yp1) in C:\Ruwanga\yii-1.1.29\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Ruwanga\yii-1.1.29\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\LikeController.php(75): CActiveRecord->save()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): LikeController->actionCreate()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('like/create')
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/like/create
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 07:59:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`makyee_blog`.`tbl_like`, CONSTRAINT `tbl_like_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_like` (`user_id`, `post_id`) VALUES (:yp0, :yp1).
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\LikeController.php (75)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/07/26 07:59:33 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`makyee_blog`.`tbl_like`, CONSTRAINT `tbl_like_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_like` (`user_id`, `post_id`) VALUES (:yp0, :yp1) in C:\Ruwanga\yii-1.1.29\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Ruwanga\yii-1.1.29\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\LikeController.php(75): CActiveRecord->save()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): LikeController->actionCreate()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('like/create')
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/like/create
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 07:59:41 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`makyee_blog`.`tbl_like`, CONSTRAINT `tbl_like_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_like` (`user_id`, `post_id`) VALUES (:yp0, :yp1).
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\LikeController.php (75)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/07/26 07:59:41 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`makyee_blog`.`tbl_like`, CONSTRAINT `tbl_like_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_like` (`user_id`, `post_id`) VALUES (:yp0, :yp1) in C:\Ruwanga\yii-1.1.29\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Ruwanga\yii-1.1.29\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\LikeController.php(75): CActiveRecord->save()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): LikeController->actionCreate()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('like/create')
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/like/create
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:09:10 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:10:26 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:10:31 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:10:47 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:10:47 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:10:54 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:10:54 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:11:16 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:11:16 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:11:27 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:11:33 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:11:33 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:11:35 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:11:35 [error] [exception.CException] CException: Alias "application.filters.CorsFilter" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\Ruwanga\yii-1.1.29\framework\YiiBase.php:330
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\YiiBase.php(204): YiiBase::import('application.fil...', true)
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(90): YiiBase::createComponent(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain::create(Object(PostController), Object(CInlineAction), Array)
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#6 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:12:16 [error] [exception.CException] CException: Property "CHttpRequest.isOptionsRequest" is not defined. in C:\Ruwanga\yii-1.1.29\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\components\CorsFilter.php(7): CComponent->__get('isOptionsReques...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(38): CorsFilter->preFilter(Object(CFilterChain))
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#7 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:12:16 [error] [exception.CException] CException: Property "CHttpRequest.isOptionsRequest" is not defined. in C:\Ruwanga\yii-1.1.29\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\components\CorsFilter.php(7): CComponent->__get('isOptionsReques...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(38): CorsFilter->preFilter(Object(CFilterChain))
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#7 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:12:17 [error] [exception.CException] CException: Property "CHttpRequest.isOptionsRequest" is not defined. in C:\Ruwanga\yii-1.1.29\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\components\CorsFilter.php(7): CComponent->__get('isOptionsReques...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(38): CorsFilter->preFilter(Object(CFilterChain))
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#7 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:12:17 [error] [exception.CException] CException: Property "CHttpRequest.isOptionsRequest" is not defined. in C:\Ruwanga\yii-1.1.29\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\components\CorsFilter.php(7): CComponent->__get('isOptionsReques...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(38): CorsFilter->preFilter(Object(CFilterChain))
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#7 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:12:17 [error] [exception.CException] CException: Property "CHttpRequest.isOptionsRequest" is not defined. in C:\Ruwanga\yii-1.1.29\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\components\CorsFilter.php(7): CComponent->__get('isOptionsReques...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(38): CorsFilter->preFilter(Object(CFilterChain))
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#7 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:12:17 [error] [exception.CException] CException: Property "CHttpRequest.isOptionsRequest" is not defined. in C:\Ruwanga\yii-1.1.29\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\components\CorsFilter.php(7): CComponent->__get('isOptionsReques...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(38): CorsFilter->preFilter(Object(CFilterChain))
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#7 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:12:17 [error] [exception.CException] CException: Property "CHttpRequest.isOptionsRequest" is not defined. in C:\Ruwanga\yii-1.1.29\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\components\CorsFilter.php(7): CComponent->__get('isOptionsReques...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(38): CorsFilter->preFilter(Object(CFilterChain))
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#7 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:12:17 [error] [exception.CException] CException: Property "CHttpRequest.isOptionsRequest" is not defined. in C:\Ruwanga\yii-1.1.29\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\components\CorsFilter.php(7): CComponent->__get('isOptionsReques...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(38): CorsFilter->preFilter(Object(CFilterChain))
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#7 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:12:57 [error] [exception.CException] CException: Property "CHttpRequest.isOptionsRequest" is not defined. in C:\Ruwanga\yii-1.1.29\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\components\CorsFilter.php(7): CComponent->__get('isOptionsReques...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(38): CorsFilter->preFilter(Object(CFilterChain))
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#7 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php/post/publicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/07/26 11:13:12 [error] [exception.CException] CException: Property "CHttpRequest.isOptionsRequest" is not defined. in C:\Ruwanga\yii-1.1.29\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\components\CorsFilter.php(7): CComponent->__get('isOptionsReques...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(38): CorsFilter->preFilter(Object(CFilterChain))
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#7 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php/post/publicPosts
+---
+2024/08/02 12:19:24 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "site". in C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
+2024/08/02 12:46:34 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "sendMessage". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('sendMessage')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('sendMessage')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/sendMessag...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/sendMessage
+---
+2024/08/02 12:46:36 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "sendMessage". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('sendMessage')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('sendMessage')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/sendMessag...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/sendMessage
+---
+2024/08/02 12:54:17 [error] [php] stream_socket_client(): Unable to connect to http://localhost:8081 (Unable to find the socket transport &quot;http&quot; - did you forget to enable it when you configured PHP?) (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:322)
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php(322): stream_socket_client()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionBroadcastMessage()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CWebApplication->run()
+REQUEST_URI=/index.php/post/broadcastMessage/
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (322)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/08/02 12:55:39 [error] [php] stream_socket_client(): Unable to connect to ws://localhost:8081 (Unable to find the socket transport &quot;ws&quot; - did you forget to enable it when you configured PHP?) (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:322)
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php(322): stream_socket_client()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionBroadcastMessage()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CWebApplication->run()
+REQUEST_URI=/index.php/post/broadcastMessage/
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (322)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/08/02 12:55:45 [error] [php] stream_socket_client(): Unable to connect to ws://localhost:8081 (Unable to find the socket transport &quot;ws&quot; - did you forget to enable it when you configured PHP?) (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:322)
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php(322): stream_socket_client()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionBroadcastMessage()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CWebApplication->run()
+REQUEST_URI=/index.php/post/broadcastMessage
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (322)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/08/02 12:55:47 [error] [php] stream_socket_client(): Unable to connect to ws://localhost:8081 (Unable to find the socket transport &quot;ws&quot; - did you forget to enable it when you configured PHP?) (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:322)
+Stack trace:
+#0 C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php(322): stream_socket_client()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionBroadcastMessage()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CWebApplication->run()
+REQUEST_URI=/index.php/post/broadcastMessage
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (322)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/08/02 13:09:29 [error] [php] The use statement with non-compound name 'Yii' has no effect (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:4)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(354): require()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CWebApplication->run()
+REQUEST_URI=/index.php/post/broadcastMessage
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/08/02 13:09:31 [error] [php] The use statement with non-compound name 'Yii' has no effect (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:4)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(354): require()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CWebApplication->run()
+REQUEST_URI=/index.php/post/broadcastMessage
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/08/02 13:09:59 [error] [php] The use statement with non-compound name 'CController' has no effect (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:4)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(354): require()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CWebApplication->run()
+REQUEST_URI=/index.php/post/broadcastMessage
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/08/02 13:10:02 [error] [php] The use statement with non-compound name 'CController' has no effect (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:4)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(354): require()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CWebApplication->run()
+REQUEST_URI=/index.php/post/broadcastMessage
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (33)
+2024/08/02 13:10:22 [error] [exception.Error] Error: Class "WebSocket\Client" not found in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:318
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionBroadcastMessage()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('broadcastMessag...')
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/broadcastM...')
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/post/broadcastMessage
+---
+2024/08/02 13:33:06 [error] [exception.Error] Error: Class "WebSocket\Client" not found in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:318
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionBroadcastMessage()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('broadcastMessag...')
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/broadcastM...')
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/post/broadcastMessage
+---
+2024/08/02 13:33:09 [error] [exception.Error] Error: Class "WebSocket\Client" not found in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:318
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionBroadcastMessage()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('broadcastMessag...')
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/broadcastM...')
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/post/broadcastMessage
+---
+2024/08/02 13:33:20 [error] [exception.Error] Error: Class "WebSocket\Client" not found in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:318
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionBroadcastMessage()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('broadcastMessag...')
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/broadcastM...')
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/post/broadcastMessage
+---
+2024/08/02 13:33:23 [error] [exception.Error] Error: Class "WebSocket\Client" not found in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:318
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionBroadcastMessage()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('broadcastMessag...')
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/broadcastM...')
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(33): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/post/broadcastMessage
+---
+2024/08/03 05:29:40 [error] [php] Array to string conversion (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:327)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionPublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CWebApplication->run()
+REQUEST_URI=/index.php/post/publicPosts
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (327)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
+2024/08/03 05:31:18 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "site". in C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
+2024/08/03 06:13:21 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:16:00 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:16:00 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:16:18 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:16:18 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:16:43 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:16:43 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:19:06 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:19:11 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:19:11 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:20:51 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:20:51 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:44:46 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:45:00 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:45:00 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:45:04 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:45:04 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:45:05 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:45:05 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:58:14 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:58:14 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:58:30 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:58:36 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:58:36 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:58:38 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/03 06:58:38 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:29:10 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:29:10 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:29:27 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:29:27 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:30:44 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:30:44 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:31:30 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:31:30 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:33:46 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:33:46 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:35:50 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:35:50 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:37:26 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:37:30 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:37:30 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:37:48 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:37:48 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:39:02 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:39:02 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:40:25 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/04 11:40:25 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "public". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/public')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/public
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/05 04:07:16 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "getAutoUpdatePublicPosts". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('getAutoUpdatePu...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('getAutoUpdatePu...')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('like/getAutoUpd...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/like/getAutoUpdatePublicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/05 04:07:16 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "getAutoUpdatePublicPosts". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('getAutoUpdatePu...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('getAutoUpdatePu...')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('like/getAutoUpd...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/like/getAutoUpdatePublicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/05 04:07:21 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "getAutoUpdatePublicPosts". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('getAutoUpdatePu...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('getAutoUpdatePu...')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('like/getAutoUpd...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/like/getAutoUpdatePublicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/05 04:07:21 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "getAutoUpdatePublicPosts". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('getAutoUpdatePu...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('getAutoUpdatePu...')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('like/getAutoUpd...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/like/getAutoUpdatePublicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/05 04:07:55 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "getAutoUpdatePublicPosts". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('getAutoUpdatePu...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('getAutoUpdatePu...')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('like/getAutoUpd...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/like/getAutoUpdatePublicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/05 04:07:58 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "getAutoUpdatePublicPosts". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('getAutoUpdatePu...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('getAutoUpdatePu...')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('like/getAutoUpd...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/like/getAutoUpdatePublicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/05 04:07:58 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "getAutoUpdatePublicPosts". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('getAutoUpdatePu...')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('getAutoUpdatePu...')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('like/getAutoUpd...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/like/getAutoUpdatePublicPosts
+HTTP_REFERER=http://localhost:5173/
+---

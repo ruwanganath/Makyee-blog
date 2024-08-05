@@ -1,8 +1,10 @@
 import React, { useState, FormEvent } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import qs from 'qs';
 import { useAuth } from '../../contexts/AuthContext';
+import { faArrowRotateBack } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Login: React.FC = () => {
     // State variables for username, password, message, loading state, verification link, and token
@@ -108,6 +110,9 @@ const Login: React.FC = () => {
                 <button type="submit" disabled={isLoading}>
                     {isLoading ? 'Logging in...' : 'Login'}
                 </button>
+                <Link className="back" to="/">
+                    <FontAwesomeIcon icon={faArrowRotateBack} /> Back
+                </Link>
                 {message && <p>{message}</p>}
                 {verificationLink && (
                     <a className="verify" rel="noopener noreferrer" onClick={handleVerifyClick}>

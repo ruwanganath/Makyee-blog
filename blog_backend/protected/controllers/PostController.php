@@ -1,7 +1,11 @@
 <?php
 
+use WebSocket\Client;
+
 class PostController extends Controller
 {
+
+    
     /**
      * Disables CSRF validation for the entire controller.
      */
@@ -9,6 +13,16 @@ class PostController extends Controller
     {
         Yii::app()->detachEventHandler('onBeginRequest', array(Yii::app()->request, 'validateCsrfToken'));
     }
+
+    public function filters()
+    {
+        return array(
+            array(
+                'application.components.CorsFilter',
+            ),
+        );
+    }
+
 
     /**
      * Sends a JSON response and ends the application.
@@ -21,6 +35,23 @@ class PostController extends Controller
         header('Content-Type: application/json');
         echo json_encode($data);
         Yii::app()->end($status);
+    }
+
+     /**
+     * Handles preflight (OPTIONS) requests.
+     */
+    public function actionOptions()
+    {
+        // This will be handled by the CORS filter.
+        Yii::app()->end();
+    }
+
+    public function actionDo()
+    {
+        echo 'testtt';
+        $this->jsonResponse(array(
+            'message' => 'Failed to submit the post.',
+        ), 400);
     }
 
     /**
@@ -260,6 +291,66 @@ class PostController extends Controller
             $this->jsonResponse(array('error' => 'An error occurred while fetching posts.'), 500);
         }
     }
+
+
+    /**
+     * Lists all blog posts that have at least 1 comment and their authors have at least 2 blogs.
+     */
+    public function actionAutoUpdatePublicPosts()
+    {
+
+        try {
+            // Create WebSocket client connection
+            $client = new Client("ws://localhost:8081");
+
+            // Fetch public posts with comments
+            $posts = Post::getPublicPostsWithComments();
+
+            // Prepare response data
+            if (!empty($posts)) {
+                $postData = array('posts' => $posts);
+            } else {
+                $postData = array('posts' => [], 'message' => 'Posts not available found.');
+            }
+
+            $client->send(json_encode($postData));
+
+        } catch (Exception $e) {
+            // Log the exception and prepare an error response
+            echo "Error: " . $e->getMessage() . "<br />\n";
+            Yii::log("WebSocket error: " . $e->getMessage(), 'error');
+
+            $this->jsonResponse([
+                'posts' => [],
+                'message' => 'An error occurred while fetching posts.',
+            ]);
+        } finally {
+            // Ensure the WebSocket connection is closed
+            if (isset($client)) {
+                $client->close();
+            }
+        }
+    }
+
+
+    /**
+     * Lists all blog posts that have at least 1 comment and their authors have at least 2 blogs.
+     */
+    public function actionGetAutoUpdatePublicPosts()
+    {
+        try {
+            $posts = Post::getPublicPostsWithComments();
+
+            if (!empty($posts)) {
+                $this->jsonResponse(array('posts' => $posts));
+            } else {
+                $this->jsonResponse(array('posts' => [], 'message' => 'No posts found.'));
+            }
+        } catch (Exception $e) {
+            $this->jsonResponse(array('error' => 'An error occurred while fetching posts.'), 500);
+        }
+    }
+
 
 }
 ?>

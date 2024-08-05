@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import qs from 'qs';
@@ -6,6 +6,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import "react-datepicker/dist/react-datepicker.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+
 
 // Define the structure of a Post object
 interface Post {
@@ -38,6 +39,7 @@ const ManagePost: React.FC = () => {
     const [userId, setUserId] = useState<string | null>(null); // State for user ID from localStorage
     const [username, setUsername] = useState<string | null>(null); // State for username from localStorage
     const navigate = useNavigate(); // Hook for navigation
+    const ws = useRef<WebSocket | null>(null);
 
     // Function to fetch posts with optional filters
     const fetchPosts = useCallback(async (filters: Filters = {}) => {
@@ -161,12 +163,28 @@ const ManagePost: React.FC = () => {
                     }
                 );
                 setMessage(response.data.message);
+                updatePublicPosts();
                 fetchPosts(); // Refresh the posts list after deletion
             } catch (error) {
                 setError('Error deleting post');
             } finally {
                 setLoading(false);
             }
+        }
+    };
+
+    const updatePublicPosts = async () => {
+        if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+            try {
+                await axios.get(
+                    'http://dev.blog_backend.com/index.php/post/autoUpdatePublicPosts',
+                    { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+                );
+            } catch (error) {
+                setError('Error fetching public posts.');
+            }
+        } else {
+          console.error('WebSocket is not open or has been closed');
         }
     };
 

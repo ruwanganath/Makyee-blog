@@ -29,6 +29,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const logout = () => {
     localStorage.removeItem('userId');
     localStorage.removeItem('isVerified');
+    localStorage.removeItem('username');    
     setIsAuthenticated(false);
     setIsVerified(false);
   };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FormEvent } from 'react';
+import React, { useState, useEffect, FormEvent, useRef } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import qs from 'qs';
@@ -18,6 +18,7 @@ const CreatePost: React.FC = () => {
     const [userId, setUserId] = useState<string | null>(null);
     const [username, setUsername] = useState<string | null>(null);
     const navigate = useNavigate();
+    const ws = useRef<WebSocket | null>(null);
 
     // Check if the user is authenticated and set user information from localStorage
     useEffect(() => {
@@ -57,10 +58,26 @@ const CreatePost: React.FC = () => {
             setContent('');
             setVisibility('public');
             setMessage(createResponse.data.message);
+            updatePublicPosts();
         } catch (error) {
             setError('Error creating post');
         } finally {
             setLoading(false);
+        }
+    };
+
+    const updatePublicPosts = async () => {
+        if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+            try {
+                await axios.get(
+                    'http://dev.blog_backend.com/index.php/post/autoUpdatePublicPosts',
+                    { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+                );
+            } catch (error) {
+                setError('Error fetching public posts.');
+            }
+        } else {
+          console.error('WebSocket is not open or has been closed');
         }
     };
 

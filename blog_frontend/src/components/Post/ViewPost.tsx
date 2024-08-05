@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FormEvent, useCallback } from 'react';
+import React, { useState, useEffect, FormEvent, useCallback, useRef } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import qs from 'qs';
@@ -39,8 +39,10 @@ const ViewPost: React.FC = () => {
     const [comments, setComments] = useState<Comment[]>([]);
     const [editingCommentId, setEditingCommentId] = useState<number | null>(null);
     const [message, setMessage] = useState<string | null>(null);
+    const ws = useRef<WebSocket | null>(null);
 
     const navigate = useNavigate();
+  
 
     // Fetch user details by user_id
     const getUser = useCallback(async (user_id: number) => {
@@ -131,6 +133,29 @@ const ViewPost: React.FC = () => {
             setUsername(storedUsername);
             fetchPosts();
         }
+
+        const connectWebSocket = () => {
+
+            ws.current = new WebSocket('ws://localhost:8081');
+      
+            ws.current.onopen = () => {
+              console.log('Connected to WebSocket server');
+            };
+      
+            ws.current.onclose = () => {
+              console.log('Disconnected from WebSocket server');
+              ws.current = null;
+              // Attempt to reconnect after a delay
+              setTimeout(connectWebSocket, 2000); // Retry after 5 seconds
+            };
+      
+            ws.current.onerror = (error) => {
+              console.error('WebSocket error:', error);
+            };
+          };
+      
+          connectWebSocket(); // Initialize the connection
+
     }, [id, isAuthenticated, navigate, fetchPosts]);
 
     // Handle comment submission for both new and existing comments
@@ -159,6 +184,7 @@ const ViewPost: React.FC = () => {
 
             setCommentText('');
             fetchComments();
+            updatePublicPosts();
         } catch (error) {
             setError('Error creating or updating comment');
         } finally {
@@ -186,11 +212,27 @@ const ViewPost: React.FC = () => {
                 );
                 setComments(prevComments => prevComments.filter(comment => comment.id !== commentId));
                 setMessage('Comment deleted successfully.');
+                updatePublicPosts();
             } catch (error) {
                 setError('Error deleting comment');
             } finally {
                 setLoading(false);
             }
+        }
+    };
+
+    const updatePublicPosts = async () => {
+        if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+            try {
+                await axios.get(
+                    'http://dev.blog_backend.com/index.php/post/autoUpdatePublicPosts',
+                    { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+                );
+            } catch (error) {
+                setError('Error fetching public posts.');
+            }
+        } else {
+          console.error('WebSocket is not open or has been closed');
         }
     };
 
