@@ -1,5 +1,7 @@
 <?php
 
+require dirname(__DIR__) .'\blog_backend\vendor\autoload.php';
+
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../../yii-1.1.29/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';

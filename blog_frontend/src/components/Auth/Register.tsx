@@ -1,6 +1,9 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import axios from 'axios';
 import qs from 'qs';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRotateBack } from '@fortawesome/free-solid-svg-icons';
 
 const Register: React.FC = () => {
     // State variables for form inputs, messages, loading state, email validation, and verification details
@@ -18,7 +21,7 @@ const Register: React.FC = () => {
     const validateEmail = async (email: string) => {
         try {
             const response = await axios.post(
-                'http://dev.blog_backend.com/index.php/user/ValidateEmail',
+                `${import.meta.env.VITE_API_URL}/index.php/user/validateEmail`,
                 qs.stringify({ email }),
                 {
                     headers: {
@@ -57,7 +60,7 @@ const Register: React.FC = () => {
         try {
             // Make POST request to register user
             const registerResponse = await axios.post(
-                'http://dev.blog_backend.com/index.php/user/register',
+                `${import.meta.env.VITE_API_URL}/index.php/user/register`,
                 qs.stringify({ username, email, password }),
                 {
                     headers: {
@@ -90,7 +93,7 @@ const Register: React.FC = () => {
     const handleVerifyClick = async () => {
         try {
             const verifyTokenResponse = await axios.post(
-                'http://dev.blog_backend.com/index.php/user/VerifyToken',
+                `${import.meta.env.VITE_API_URL}/index.php/user/verifyToken`,
                 qs.stringify({ verification_token: verificationToken }),
                 {
                     headers: {
@@ -145,6 +148,9 @@ const Register: React.FC = () => {
                 <button type="submit" disabled={isLoading}>
                     {isLoading ? 'Registering...' : 'Register'}
                 </button>
+                <Link className="back" to="/">
+                    <FontAwesomeIcon icon={faArrowRotateBack} /> Back
+                </Link>
                 {message && <p>{message}</p>}
                 {verificationLink && (
                     <a className="verify" rel="noopener noreferrer" onClick={handleVerifyClick}>

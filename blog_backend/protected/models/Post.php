@@ -170,4 +170,32 @@ class Post extends CActiveRecord
 
         return $posts;
     }
+
+    
+    public static function getPublicPostsWithComments()
+    {
+        // Get the database connection
+        $db = Yii::app()->db;
+
+        // Define the SQL query
+        $sql = "
+            SELECT p.id, p.title, p.description, p.content, p.created_at, p.user_id, COUNT(c.id) as comment_count
+            FROM tbl_post p
+            JOIN tbl_comment c ON p.id = c.post_id
+            WHERE p.public = '1'
+            GROUP BY p.id
+            HAVING COUNT(c.id) >= 1 AND p.user_id IN (
+                SELECT user_id
+                FROM tbl_post
+                GROUP BY user_id
+                HAVING COUNT(id) >= 2
+            );
+        ";
+
+        // Execute the query and fetch results
+        $command = $db->createCommand($sql);
+        $posts = $command->queryAll();
+
+        return $posts;
+    }
 }

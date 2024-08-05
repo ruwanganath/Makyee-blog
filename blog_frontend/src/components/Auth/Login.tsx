@@ -1,8 +1,11 @@
 import React, { useState, FormEvent } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import qs from 'qs';
 import { useAuth } from '../../contexts/AuthContext';
+import { faArrowRotateBack } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Login: React.FC = () => {
     // State variables for username, password, message, loading state, verification link, and token
@@ -12,7 +15,7 @@ const Login: React.FC = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [verificationLink, setVerificationLink] = useState(false);
     const [verificationToken, setVerificationToken] = useState('');
-
+   
     // React Router's navigate hook for programmatic navigation
     const navigate = useNavigate();
 
@@ -24,11 +27,10 @@ const Login: React.FC = () => {
         e.preventDefault();
         setIsLoading(true);
         setMessage('');
-
         try {
             // Make POST request to authenticate user
             const response = await axios.post(
-                'http://dev.blog_backend.com/index.php/user/authenticate',
+                `${import.meta.env.VITE_API_URL}/index.php/user/authenticate`,
                 qs.stringify({ username, password }),
                 {
                     headers: {
@@ -68,7 +70,7 @@ const Login: React.FC = () => {
     const handleVerifyClick = async () => {
         try {
             const verifyTokenResponse = await axios.post(
-                'http://dev.blog_backend.com/index.php/user/VerifyToken',
+                `${import.meta.env.VITE_API_URL}/index.php/user/VerifyToken`,
                 qs.stringify({ verification_token: verificationToken }),
                 {
                     headers: {
@@ -108,6 +110,9 @@ const Login: React.FC = () => {
                 <button type="submit" disabled={isLoading}>
                     {isLoading ? 'Logging in...' : 'Login'}
                 </button>
+                <Link className="back" to="/">
+                    <FontAwesomeIcon icon={faArrowRotateBack} /> Back
+                </Link>
                 {message && <p>{message}</p>}
                 {verificationLink && (
                     <a className="verify" rel="noopener noreferrer" onClick={handleVerifyClick}>

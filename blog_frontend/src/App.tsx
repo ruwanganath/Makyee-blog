@@ -8,9 +8,10 @@ import CreatePost from './components/Post/CreatePost';
 import EditPost from './components/Post/EditPost';
 import ViewPost from './components/Post/ViewPost';
 import ManagePost from './components/Post/ManagePost';
+import PublicPage from './components/Post/PublicPosts';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faArrowRightFromBracket, faListCheck } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faArrowRightFromBracket, faListCheck, faSignIn, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 // A route that requires authentication to access
 const PrivateRoute: React.FC<{ children: JSX.Element }> = ({ children }) => {
@@ -44,7 +45,7 @@ const AuthLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     <div className="overlay-panel overlay-left">
                         <h1>Welcome!</h1>
                         <p>To keep connected with us please login with your credentials</p>
-                        <Link to="/">
+                        <Link to="/login">
                             <button className="ghost" id="signIn" onClick={() => handleOnClick('signIn')}>
                                 Login
                             </button>
@@ -91,7 +92,6 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 <Link to="/posts">
                     <FontAwesomeIcon icon={faHouse} /> Home
                 </Link>
-                {/* Add other navigation links here */}
             </nav>
             <div className="content">
                 {children}
@@ -103,14 +103,43 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     );
 };
 
+
+
+// Main layout for authenticated users
+const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+       return (
+        <div className="main-layout">
+            <div className="header">
+                <h2>BLOG - Public Page</h2>
+            </div>
+            <nav>
+                <Link to="/login">
+                    <FontAwesomeIcon icon={faSignIn} /> Login
+                </Link>
+                <Link to="/register">
+                    <FontAwesomeIcon icon={faUserPlus} /> Register
+                </Link>
+            </nav>
+            <div className="content">
+                {children}
+            </div>
+            <div className="footer">
+                <p>&copy; 2024 Ruwanganath Ramanayake. All rights reserved.</p>
+            </div>
+        </div>
+    );
+};
+
+
+
 // Main application component with routing
 const App: React.FC = () => {
     return (
         <Routes>
             {/* Public Routes */}
-            <Route path="/" element={<AuthLayout><Login /></AuthLayout>} />
+            <Route path="/login" element={<AuthLayout><Login /></AuthLayout>} />
             <Route path="/register" element={<AuthLayout><Register /></AuthLayout>} />
-           
+            <Route path="/" element={<PublicLayout><PublicPage /></PublicLayout>} />
 
             {/* Private Routes */}
             <Route path="/posts" element={<PrivateRoute><MainLayout><Post /></MainLayout></PrivateRoute>} />
@@ -126,9 +155,9 @@ const App: React.FC = () => {
 // Wrap the app with AuthProvider and Router
 const WrappedApp: React.FC = () => (
     <AuthProvider>
-        <Router>
-            <App />
-        </Router>
+            <Router>
+                <App />
+            </Router>
     </AuthProvider>
 );
 

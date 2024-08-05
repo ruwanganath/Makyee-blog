@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import qs from 'qs';
@@ -38,6 +38,8 @@ const ManagePost: React.FC = () => {
     const [userId, setUserId] = useState<string | null>(null); // State for user ID from localStorage
     const [username, setUsername] = useState<string | null>(null); // State for username from localStorage
     const navigate = useNavigate(); // Hook for navigation
+    const ws = useRef<WebSocket | null>(null);
+    
 
     // Function to fetch posts with optional filters
     const fetchPosts = useCallback(async (filters: Filters = {}) => {
@@ -47,7 +49,7 @@ const ManagePost: React.FC = () => {
             const userId = localStorage.getItem('userId'); // Retrieve user ID from localStorage
             const filtersWithUser = { ...filters, author: userId }; // Add user ID to filters
             const indexResponse = await axios.post(
-                'http://dev.blog_backend.com/index.php/post/index',
+                `${import.meta.env.VITE_API_URL}/index.php/post/index`,
                 qs.stringify({ filters: filtersWithUser }),
                 {
                     headers: {
@@ -109,7 +111,7 @@ const ManagePost: React.FC = () => {
     // Fetch user details
     const getUser = async (user_id: number) => {
         return await axios.post(
-            'http://dev.blog_backend.com/index.php/user/getUser',
+            `${import.meta.env.VITE_API_URL}/index.php/user/getUser`,
             qs.stringify({ user_id: user_id }),
             {
                 headers: {
@@ -122,7 +124,7 @@ const ManagePost: React.FC = () => {
     // Fetch the comment count for a post
     const getCommentCount = async (postId: number) => {
         return await axios.post(
-            'http://dev.blog_backend.com/index.php/comment/count',
+            `${import.meta.env.VITE_API_URL}/index.php/comment/count`,
             qs.stringify({ post_id: postId }),
             {
                 headers: {
@@ -135,7 +137,7 @@ const ManagePost: React.FC = () => {
     // Fetch the like count for a post
     const getLikeCount = async (postId: number) => {
         return await axios.post(
-            'http://dev.blog_backend.com/index.php/like/count',
+            `${import.meta.env.VITE_API_URL}/index.php/like/count`,
             qs.stringify({ post_id: postId }),
             {
                 headers: {
@@ -152,7 +154,7 @@ const ManagePost: React.FC = () => {
             setError(null);
             try {
                 const response = await axios.post(
-                    `http://dev.blog_backend.com/index.php/post/delete`,
+                    `${import.meta.env.VITE_API_URL}/index.php/post/delete`,
                     qs.stringify({ post_id: postId }),
                     {
                         headers: {
@@ -161,12 +163,28 @@ const ManagePost: React.FC = () => {
                     }
                 );
                 setMessage(response.data.message);
+                updatePublicPosts();
                 fetchPosts(); // Refresh the posts list after deletion
             } catch (error) {
                 setError('Error deleting post');
             } finally {
                 setLoading(false);
             }
+        }
+    };
+
+    const updatePublicPosts = async () => {
+        if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+            try {
+                await axios.get(
+                    `${import.meta.env.VITE_API_URL}/index.php/post/autoUpdatePublicPosts`,
+                    { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+                );
+            } catch (error) {
+                setError('Error fetching public posts.');
+            }
+        } else {
+          console.error('WebSocket is not open or has been closed');
         }
     };
 
