@@ -221,11 +221,12 @@ const ViewPost: React.FC = () => {
         }
     };
 
+    
     const updatePublicPosts = async () => {
         if (ws.current && ws.current.readyState === WebSocket.OPEN) {
             try {
                 await axios.get(
-                    `${import.meta.env.VITE_API_URL}/index.php/post/autoUpdatePublicPosts`,
+                    `${import.meta.env.VITE_API_URL}/index.php/post/autoUpdatePublicPosts`, 
                     { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
                 );
             } catch (error) {

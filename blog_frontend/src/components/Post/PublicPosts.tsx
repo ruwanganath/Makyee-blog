@@ -125,12 +125,6 @@ const PublicPosts: React.FC = () => {
         getInitialPostData(); // Initial data fetch
         connectWebSocket(); // Initialize WebSocket connection
 
-        // Cleanup function to close WebSocket connection on component unmount
-        return () => {
-            if (ws.current) {
-                ws.current.close();
-            }
-        };
     }, [fetchPosts]);
 
     // API call to fetch user data based on user ID

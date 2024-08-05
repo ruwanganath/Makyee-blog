@@ -5573,3 +5573,223 @@ Stack trace:
 REQUEST_URI=/index.php/like/getAutoUpdatePublicPosts
 HTTP_REFERER=http://localhost:5173/
 ---
+2024/08/05 11:31:47 [error] [php] Undefined variable $WEBSOCKET_SERVER (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:305)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionAutoUpdatePublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CWebApplication->run()
+REQUEST_URI=/index.php/post/autoUpdatePublicPosts
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (305)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
+2024/08/05 11:32:33 [error] [php] Undefined variable $WEBSOCKET_SERVER (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:305)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionAutoUpdatePublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CWebApplication->run()
+REQUEST_URI=/index.php/post/autoUpdatePublicPosts
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (305)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
+2024/08/05 11:34:07 [error] [php] Undefined variable $WEBSOCKET_SERVER (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:305)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionAutoUpdatePublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CWebApplication->run()
+REQUEST_URI=/index.php/post/autoUpdatePublicPosts
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (305)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
+2024/08/05 11:34:37 [error] [php] Undefined variable $WEBSOCKET_SERVER (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:305)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionAutoUpdatePublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CWebApplication->run()
+REQUEST_URI=/index.php/post/autoUpdatePublicPosts
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (305)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
+2024/08/05 11:38:14 [error] [php] Undefined variable $WEBSOCKET_SERVER (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:305)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionAutoUpdatePublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CWebApplication->run()
+REQUEST_URI=/index.php/post/autoUpdatePublicPosts
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (305)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
+2024/08/05 11:40:52 [error] [php] Undefined variable $WEBSOCKET_SERVER (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:305)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionAutoUpdatePublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CWebApplication->run()
+REQUEST_URI=/index.php/post/autoUpdatePublicPosts
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (305)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
+2024/08/05 11:41:43 [error] [php] Undefined variable $WEBSOCKET_SERVER (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:305)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionAutoUpdatePublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CWebApplication->run()
+REQUEST_URI=/index.php/post/autoUpdatePublicPosts
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (305)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
+2024/08/05 11:44:08 [error] [php] Undefined variable $WEBSOCKET_SERVER (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:305)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionAutoUpdatePublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CWebApplication->run()
+REQUEST_URI=/index.php/post/autoUpdatePublicPosts
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (305)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
+2024/08/05 11:52:43 [error] [php] Undefined variable $WEBSOCKET_SERVER (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:305)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionAutoUpdatePublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CWebApplication->run()
+REQUEST_URI=/index.php/post/autoUpdatePublicPosts
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (305)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
+2024/08/05 12:12:22 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "publicPosts". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('publicPosts')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/publicPosts
+---
+2024/08/05 12:12:24 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "publicPosts". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('publicPosts')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/publicPosts
+---
+2024/08/05 12:12:40 [error] [php] Undefined variable $WEBSOCKET_SERVER (C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:305)
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionAutoUpdatePublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CorsFilter->filter()
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CWebApplication->run()
+REQUEST_URI=/index.php/post/autoUpdatePublicPosts
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (305)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
+2024/08/05 12:14:53 [error] [exception.Error] Error: Undefined constant "WEBSOCKET_SERVER" in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php:305
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\actions\CInlineAction.php(49): PostController->actionAutoUpdatePublicPosts()
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Ruwanga\yii-1.1.29\framework\web\filters\CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#5 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('autoUpdatePubli...')
+#8 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/autoUpdate...')
+#9 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/post/autoUpdatePublicPosts
+HTTP_REFERER=http://localhost:5173/
+---
+2024/08/05 13:06:24 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "publicPosts". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('publicPosts')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/publicPosts
+---
+2024/08/05 13:06:28 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "publicPosts". in C:\Ruwanga\yii-1.1.29\framework\web\CController.php:486
+Stack trace:
+#0 C:\Ruwanga\yii-1.1.29\framework\web\CController.php(270): CController->missingAction('publicPosts')
+#1 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(282): CController->run('publicPosts')
+#2 C:\Ruwanga\yii-1.1.29\framework\web\CWebApplication.php(141): CWebApplication->runController('post/publicPost...')
+#3 C:\Ruwanga\yii-1.1.29\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Ruwanga\Makyee-blog\blog_backend\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/publicPosts
+---
+2024/08/05 13:06:45 [error] [application] WebSocket error: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+in C:\Ruwanga\Makyee-blog\blog_backend\protected\controllers\PostController.php (320)
+in C:\Ruwanga\Makyee-blog\blog_backend\index.php (35)
